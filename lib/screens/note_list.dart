@@ -15,6 +15,7 @@ class _NoteListState extends State<NoteList> {
       appBar: AppBar(title: Text('Notes')),
       body: getNoteListView(),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple.shade900,
         onPressed: () {
           print("floating action button pressed");
         },
