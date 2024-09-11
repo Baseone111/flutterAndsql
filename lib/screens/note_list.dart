@@ -12,13 +12,19 @@ class _NoteListState extends State<NoteList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Notes')),
+      appBar: AppBar(
+          title: Text(
+            'Notes',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.purple.shade900),
       body: getNoteListView(),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.purple.shade900,
         onPressed: () {
           print("floating action button pressed");
         },
+        child: Icon(Icons.add, color: Colors.white),
       ),
     );
   }
