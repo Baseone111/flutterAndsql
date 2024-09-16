@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobilenotes/screens/note_detail.dart';
+
 import 'package:mobilenotes/screens/note_list.dart';
 
 void main() => runApp(MyApp());
@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
         // you want
 
         // A widget which will be started on application startup
-        home: NoteDetails());
+        home: NoteList());
   }
 }
