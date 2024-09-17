@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NoteDetails extends StatefulWidget {
-  const NoteDetails({Key? key}) : super(key: key);
+  const NoteDetails({Key? key, required this.appBarTitle}) : super(key: key);
+  final String appBarTitle;
 
   @override
   State<NoteDetails> createState() => _NoteDetailsState();
@@ -17,7 +18,7 @@ class _NoteDetailsState extends State<NoteDetails> {
     TextStyle? textStyle = Theme.of(context).textTheme.titleLarge;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Edit Note')),
+      appBar: AppBar(title: Text(widget.appBarTitle)),
       body: Padding(
           padding: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
           child: ListView(
