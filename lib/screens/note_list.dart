@@ -23,7 +23,7 @@ class _NoteListState extends State<NoteList> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.purple.shade900,
         onPressed: () {
-          toNavigateToNoteDetail();
+          toNavigateToNoteDetail('Add Note');
           print("floating action button pressed");
         },
         child: Icon(Icons.add, color: Colors.white),
@@ -48,7 +48,7 @@ class _NoteListState extends State<NoteList> {
               subtitle: Text("Dammy Date"),
               trailing: Icon(Icons.delete, color: Colors.red.shade900),
               onTap: () {
-                toNavigateToNoteDetail();
+                toNavigateToNoteDetail('Edit Note');
                 print('List tile tapped');
               },
             ),
@@ -56,8 +56,10 @@ class _NoteListState extends State<NoteList> {
         });
   }
 
-  void toNavigateToNoteDetail() {
+  void toNavigateToNoteDetail(String title) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const NoteDetails()));
+        context,
+        MaterialPageRoute(
+            builder: (context) => NoteDetails(appBarTitle: title)));
   }
 }
